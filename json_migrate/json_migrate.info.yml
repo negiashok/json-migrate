@@ -1,0 +1,9 @@
+name: Migrate from JSON files
+description: Migrate from json file to Drupal 8 content type
+package: Migration
+type: module
+core: 8.x
+dependencies:
+  - drupal:migrate
+  - migrate_plus:migrate_plus
+  - migrate_tools:migrate_tools

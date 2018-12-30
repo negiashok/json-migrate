@@ -1,0 +1,38 @@
+id: json_page 
+label: JSON Page Migration 
+Group: json_example
+
+source: 
+  plugin: json_page
+
+destination: 
+  plugin: entity:node 
+  bundle: custom_entity
+
+process: 
+  type: 
+    plugin: default_value 
+    default_value: custom_entity 
+  title: title 
+  population: population
+  state: state
+  id: id
+
+created: date 
+  changed: date 
+  'body/format': 
+    plugin: default_value 
+    default_value: basic_html 
+  'body/value': body
+  langcode: 
+    plugin: default_value 
+    default_value: en
+  uid: 
+    plugin: default_value 
+    default_value: 1
+ 
+# use forced module dependency so uninstall/reinstall works properly 
+dependencies: 
+  enforced: 
+    module: 
+      - json_migrate
